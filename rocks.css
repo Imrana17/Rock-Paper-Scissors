@@ -3,16 +3,22 @@ body{
     color: white;
     font-family: Arial;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 } 
 .title{
     font-size: 30px;
     font-weight: bold;
-    margin-left: 39px;
 }
 .move-icon{
     height: 60px;
     width: 60px;
     border-radius: 50%;
+    margin-top: 10px;
 }
 .move-btn{
     background-color: transparent;
@@ -24,45 +30,66 @@ body{
     margin-right: 10px;
     cursor: pointer;
 }
-.result{
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 50px;
-position: relative;
-left: 130px; 
-bottom: 30px;
+.result, .js-moves, .js-score {
+    position: static;
+    margin: 10px 0;
+    text-align: center;
 }
 .score{
-    margin-top: 60px; 
+    margin-top: 30px; 
 }
 
-.js-moves{
-    position: relative;
-left: 80px;
-bottom: 30px;
-}
-
-.js-score{
-    position: relative;
-    left: 80px;
-    bottom: 10px;
-}
 .reset-score-btn{
     background-color: white;
     border: none;
     font-size: 15px;
     padding: 8px 15px;
     cursor: pointer;
-    margin-left: 130px;
+    margin-left: 0;
+    margin-top: 25px;
+    align-self: center;
 }
 
 .container{
-justify-content: center;
-align-items: center;    
-margin: 0 auto;
-display: inline;
+    justify-content: center;
+    align-items: center;    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
 }
 .btn{
-    position: relative;
-    
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .move-btn {
+        height: 100px;
+        width: 100px;
+    }
+
+    .move-icon {
+        height: 50px;
+        width: 50px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .result {
+        font-size: 20px;
+    }
+
+    .reset-score-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
 }
