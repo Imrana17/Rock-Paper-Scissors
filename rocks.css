@@ -57,10 +57,10 @@ bottom: 30px;
 }
 
 .container{
-display: inline;
 justify-content: center;
 align-items: center;    
 margin: 0 auto;
+display: inline;
 }
 .btn{
     position: relative;
